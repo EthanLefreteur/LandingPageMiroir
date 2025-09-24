@@ -1,6 +1,7 @@
 <script setup>
 import HeaderMenu from './components/HeaderMenu.vue';
 import TextBlock from './components/TextBlock.vue';
+import ImageTextBlock from './components/ImageTextBlock.vue';
 import Space from './components/Space.vue';
 import BasicList from './components/BasicList.vue';
 import image from "./assets/mirror.jpg"
@@ -40,9 +41,12 @@ function scrollToAnchor(id) {
     <TextBlock Title="Le Miroir du futur"
       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
     <Space space="100px" />
-    <img :src="image"/>
-    <TextBlock Title="Bien plus qu'un miroir"
-      Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+    
+    <ImageTextBlock Title="Bien plus qu'un miroir"
+      Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      :Image="image"
+    />
+      
     <Space space="100px" />
     <BasicList Title="Composants du miroir"
       :Elements=SpecsList />

@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <div class="textblock">
+    <div class="TextBlock">
         <h1>{{ Title }}</h1>
         <p>{{ Text }}</p>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <style scoped>
-    .textblock {
+    .TextBlock {
         display: flex;
         flex-direction: column;
         justify-content: center;
