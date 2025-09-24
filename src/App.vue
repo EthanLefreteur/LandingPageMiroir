@@ -3,10 +3,11 @@ import HeaderMenu from './components/HeaderMenu.vue';
 import TextBlock from './components/TextBlock.vue';
 import Space from './components/Space.vue';
 import BasicList from './components/BasicList.vue';
+import image from "./assets/mirror.jpg"
 
 const buttons = [
-  { text: "Top Page", id: "button_1", callback: () => { scrollToAnchor("header") } },
-  { text: "Bottom Page", id: "button_2", callback: () => { } }
+  { text: "Top Page", id: "button_1", callback: () => { scrollToAnchor("top") } },
+  { text: "Bottom Page", id: "button_2", callback: () => { scrollToAnchor("contact") } }
 ]
 
 const SpecsList = [
@@ -31,14 +32,15 @@ function scrollToAnchor(id) {
 
 <template>
   <header>
-    <HeaderMenu :Buttons="buttons" id="header" />
+    <HeaderMenu :Buttons="buttons" Title="Smart Mirror" id="header" />
   </header>
 
   <main>
-    <Space space="100px" />
+    <Space space="200px" id="top"/>
     <TextBlock Title="Le Miroir du futur"
       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
     <Space space="100px" />
+    <img :src="image"/>
     <TextBlock Title="Bien plus qu'un miroir"
       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
     <Space space="100px" />
@@ -46,7 +48,7 @@ function scrollToAnchor(id) {
       :Elements=SpecsList />
     <Space space="100px" />
     <TextBlock Title="Contactez nous !"
-      Text="Lorem ipsum dolor sit amet !" />
+      Text="Lorem ipsum dolor sit amet !" id="contact"/>
     
   </main>
 </template>
@@ -76,6 +78,8 @@ body {
 
 <style scoped>
 header {
+  top: 0;
+  position: fixed;
   height: 100px;
   width: 100%;
   background: black;
